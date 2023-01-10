@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1.2</title>
+
+</head>
+<body>
+    
+    <script>
+    
+        function calcularFarenheit(){
+            var celsius = document.getElementById("celsius").value ;
+            var farenheit = 1.8 * celsius + 32 ;
+
+            console.log("celsius:" + celsius) ; 
+            console.log("farenheit:" + farenheit);
+
+            document.getElementById("resultado").innerHTML = "El resultado es " + farenheit;
+
+        }
+    </script>
+
+    <div>
+        <label for="celsius">Grados Celsius:</label>
+        <input type="number" id="celsius"> <br>
+        <input type="button" onclick="calcularFarenheit()" value="Calcular"> <br>
+
+    </div>
+
+    <div id="resultado"></div>
+
+</body>
+</html>
