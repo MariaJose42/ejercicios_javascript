@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2.1</title>
+</head>
+<body>
+
+    <h1>Ejercicio 2.1</h1>
+
+    <style>
+        h1{
+            color: blue;
+        }
+        #resultado{
+            color: blueviolet;
+        }
+    </style>
+
+    <script>
+        function calcularEstado(){
+            var temperatura = document.getElementById("temperatura").value ;
+
+            if (temperatura < 0){
+                console.log("HIELO")
+                document.getElementById("resultado").innerHTML = "Es hielo"
+            }
+
+            else if (temperatura>=100){
+                console.log("GAS")
+                document.getElementById("resultado").innerHTML = "Es gas"
+            }
+
+            else{
+                console.log("LIQUIDO")
+                document.getElementById("resultado").innerHTML = "Es líquido"
+            }
+        
+        
+        }
+    </script>
+
+    <div>
+        <label for="temperatura">Temperatura del agua:</label>
+        <input type="number" id="temperatura"> <br>
+        <input type="button" onclick="calcularEstado()" value="Calcular">
+    </div>
+    
+    <div id="resultado"></div>
+
+</body>
+</html>
