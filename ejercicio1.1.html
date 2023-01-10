@@ -24,10 +24,12 @@
             var minutos = parseInt(document.getElementById("minutos").value);
             var segundos = parseInt(document.getElementById("segundos").value);
             //Calcular todos los segundos
-            var total = segundos + minutos * 60 + 3600 * hora;
-       document.getElementById("sol").innerHTML = "Total:" + total + "segundos";
+            var total = segundos + 60 * minutos + 3600 * horas;
+            
+            document.getElementById("sol").innerHTML = "Total:" + total + "segundos";
 
             console.log("total:" + total + "segundos");
+             }
     </script>
 
 </head>
