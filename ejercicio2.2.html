@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2.2</title>
+</head>
+<body>
+
+    <h1>Ejercicio 2.2</h1>
+
+    <script>
+        function calcularEdad(){
+            var edad = document.getElementById("edad").value ;
+
+            if(edad<=7){
+                console.log("BENJAMIN")
+                document.getElementById("resultado").innerHTML = "Es benjamín"
+            } 
+
+            else if (edad <=9){
+                console.log("ALEVIN")
+                document.getElementById("resultado").innerHTML= "Es alevín"
+            }
+            else if (edad<=11){
+                console.log("INFANTIL")
+                document.getElementById("resultado").innerHTML="Es infantil"
+            }
+            else{
+                console.log("CADETE")
+                document.getElementById("resultado").innerHTML= "Es cadete"
+            }
+        }
+    </script>
+
+    <div>
+        <label for="edad">Dime tu edad:</label>
+        <input type="number" id="edad" min="6"> <br>
+        <input type="button" onclick="calcularEdad()" value="Calcular">
+    </div>
+
+    <div id="resultado"></div>
+    
+</body>
+</html>
