@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera llamada REST</title>
+</head>
+<body>
+    <script>
+        fetch("https://swapi.dev/api/people/1").then((response) => response.json())
+        .then((data) => {
+            //Creamos el hombre
+            var h1= document.createElement("h1");
+
+            h1.innerHTML = data.name;
+
+            document.body.appendChild(h1);
+
+            var h2 = document.createElement("h2");
+            h2.innerHTML = data.gender;
+            document.body.appendChild(h2) ;
+
+            var p = document.createElement("p");
+            p.innerHTML = "Su peso es :" + data.height;
+            document.body.appendChild(p) ;
+
+            var hairc = document.createElement("hairc");
+            hairc.innerHTML = data.hair_color;
+            document.body.appendChild(hairc)
+        })
+    </script>
+</body>
+</html>
