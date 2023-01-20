@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.6</title>
+</head>
+<body>
+   <!-- Realizar un juego donde el usuario tenga que adivinar un número menor de 100 que la máquina previamente 
+   a generado aleatoriamente. El jugador tendrá 3 oportunidades para acertar.-->
+
+    <h1>Adivina el número</h1>
+
+    <script>
+        function dameNumeroAleatorio(max){
+            return Math.floor(Math.random()*max);
+        }
+
+        var numAleatorio= dameNumeroAleatorio(100);
+        var oportunidades=3;
+
+        function juego(){
+            //let num = parseInt(prompt("Dime un número:"));
+
+            for(var i =0; i < oportunidades;i++){
+                let num = parseInt(prompt("Dime un número:"));
+                if(numAleatorio==num){
+                    document.getElementById("resultado").innerHTML= "HAS GANADO"
+                }
+                else{
+                    document.getElementById("resultado").innerHTML="Vuelve ha intentarlo"
+
+                }
+            
+                }
+        }
+
+
+    </script>
+
+    <div>
+        <input type="button" onclick="juego()" value="Adivina el número">
+    </div>
+    
+    <div id="resultado"></div>
+
+</body>
+</html>
