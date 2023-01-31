@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3.4</title>
+
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .etiqueta{
+            color: red;
+        }
+        #resultado{
+            color: blueviolet;
+        }
+
+    </style>
+
 </head>
 <body>
     <h1>Número primo</h1>
@@ -34,7 +48,7 @@
     </script>
 
     <div>
-        <label for="num">Dime un número:</label>
+        <label class="etiqueta" for="num">Dime un número:</label>
         <input type="number" id="num"><br>
         <input type="button" onclick="calcular()" value="¿Es primo?">
     </div>
