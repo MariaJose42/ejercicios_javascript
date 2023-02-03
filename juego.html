@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+</head>
+<body>
+    <script>
+        let libros =[
+            {"nombre":"Percy Jackson y el ladrón del rayo" ,
+            "autor": "Rick Riordan",
+            "año":2005} ,
+            {"nombre":"La corte del eclipse" ,
+            "autor": "Claudia Ramírez",
+            "año":2022} ,
+            {"nombre":"La leyenda del hechicero: El aprendiz" ,
+            "autor": "Taran Matharu",
+            "año":2016} 
+        ]
+        var index=0
+
+        function mostrar(i){
+            document.getElementById("nombre").innerHTML = libros[i]["nombre"] ;
+            document.getElementById("autor").innerHTML = libros[i]["autor"] ;
+            document.getElementById("año").innerHTML = libros[i]["año"]
+        }
+
+        function siguiente(){
+            mostrar(index);
+            console.log("index:"+index);
+            if(index==libros.length-1){
+                index=-1;
+            }
+            index +=1;
+
+        }
+    </script>
+
+    <h1>Libros</h1>
+
+    <label for="nombre">Nombre:</label> <span id="nombre"></span> <br>
+    <label for="autor">Autor:</label> <span id="autor"></span> <br>
+    <label for="año">Año:</label> <span id="año"></span> <br>
+
+    <div>
+        <input type="button" onclick="siguiente()" value="Siguiente">
+    </div>
+
+    <script>
+        mostrar(index);
+    </script>
+</body>
+</html>
